@@ -76,7 +76,19 @@ public class Shuffler {
       double temp = data[dest];
       data[dest] = data[source];
       data[source] = temp;
-
     }
   }
-  }
+
+      public void shuffle (Object[] data) {
+        for (int dest = data.length - 1; dest > 0; dest--) {
+          int source = rng.nextInt(dest + 1);
+          Object temp = data[dest];
+          data[dest] = data[source];
+          data[source] = temp;
+
+
+        }
+      }
+    }
+
+
